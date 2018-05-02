@@ -1,0 +1,32 @@
+#+TITLE: 杂项
+#+AUTHOR: qiaoin
+#+EMAIL: qiao.liubing@gmail.com
+#+OPTIONS: toc:3 num:nil
+#+STARTUP: showall
+#+DATE: 2018-05-02 11:44:49 [start]
+
+*** Emacs
+
+**** *# Orgmode* 
+
+     - 同级标题之间移动
+       + 上一个同级标题 =C-c C-b= =gk=
+       + 下一个同级标题 =C-c C-f= =gj=
+     - 链接表示 =[= =[link][description]= =]=
+     - 插入表格
+       + =| item1 | item2 |= 换行 =|-= 按 =TAB=
+       + =C-c C-c= 强制表格重新调整
+
+**** *# Dired mode*
+
+     - 跳到 =Dired mode= =SPC f j=
+     - 
+
+**** *# 代码缩进修改*
+
+     - 对指定区域缩进 =C-M-\=
+     - 全局缩进 =C-x h= 、 =C-M-\=
+
+*** Vim
+
+*** Git
