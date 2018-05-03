@@ -7,6 +7,10 @@
 
 *** Emacs
 
+    #+BEGIN_QUOTE
+    *注* 使用的是 *Spacemacs* 的 =vim= 编辑模式，即 =init.el= 中 =dotspacemacs-editing-style 'vim= , 更详细的 =Spacemacs= 可以参看另外的 =repo=
+    #+END_QUOTE
+
 **** *# Orgmode* 
 
      - 同级标题之间移动
@@ -29,4 +33,14 @@
 
 *** Vim
 
+    - =:set number= 显示行号， =vim +26 sample.txt= 打开文件直接到达 26 行，在编辑时也可以 =:26= 跳转到 26行
+    - =:/<keyword>= 搜索 =< >= 中的单词并将光标移动到第一个匹配项，输入 =n= 导航到该单词的下一个匹配项
+    - =:%s/desktop/laptop/g= 进行替换，将整个文件中的 =desktop= 替换为 =laptop=
+
 *** Git
+
+*** Coding
+
+**** *# 递归程序*
+
+     - 将基础判断条件放在第一行代码，前面不要有任何其他的执行代码
