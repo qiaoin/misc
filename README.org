@@ -31,11 +31,19 @@
      - 对指定区域缩进 =C-M-\=
      - 全局缩进 =C-x h= 、 =C-M-\=
 
+
 *** Vim
 
     - =:set number= 显示行号， =vim +26 sample.txt= 打开文件直接到达 26 行，在编辑时也可以 =:26= 跳转到 26行
     - =:/<keyword>= 搜索 =< >= 中的单词并将光标移动到第一个匹配项，输入 =n= 导航到该单词的下一个匹配项
     - =:%s/desktop/laptop/g= 进行替换，将整个文件中的 =desktop= 替换为 =laptop=
+
+
+*** Linux Command
+
+    - 复制一个目录下的所有文件到另一个目录（该目录尚未创建好） =cp -r /home/qiaoin/gloo/transport/ibverbs /home/qiaoin/tests=
+    - 查找某一个目录下所有的文件中的某一指定字符串，并进行替换 =sed -i "s/gloo/qiaoin/g" `grep gloo -rl /home/qiaoin/tests/ibverbs`=
+
 
 *** Git
 
@@ -44,3 +52,19 @@
 **** *# 递归程序*
 
      - 将基础判断条件放在第一行代码，前面不要有任何其他的执行代码
+
+
+*** 编译与链接
+
+    在编译程序的时候，由于找不到某一个内库，会出现下面的报错：
+
+    #+BEGIN_QUOTE
+    /usr/bin/ld: cannot find -l<nameOfTheLibrary>
+    #+END_QUOTE
+
+    要找的内库为 =libxyz.so= ，同时知道其路径为 =/home/user/qiaoin/= 下，编译时需要加上链接选项： =g++ -L/home/user/qiaoin -lxyz myprog.cpp -o myprog=
+
+    - =-l= option gets the library name *without* =lib= and =.so= at its begining and end
+    - In some cases, the library file name is followed by its version, for instance =libxyz.so.1.2= . In these cases, g++ also cannot find the library file. A simple workaround to fix this is creating a symbolic link to =libxyz.so.1.2= called =libxyz.so=
+
+    想要知道 =linker= 到底是在找哪一个文件，可以使用： =ld -lxyz --verbose= ， =linker= 会去在好些目录下去找，只要在其中一个目录下找到了就可以，根据输出的信息，然后查找相应的目录，必要时添加可能需要添加软连接
