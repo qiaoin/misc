@@ -11,7 +11,7 @@
     *注* 使用的是 *Spacemacs* 的 =vim= 编辑模式，即 =init.el= 中 =dotspacemacs-editing-style 'vim= , 更详细的 =Spacemacs= 可以参看另外的 =repo=
     #+END_QUOTE
 
-**** *# Orgmode* 
+**** *# Orgmode*
 
      - 同级标题之间移动
        + 上一个同级标题 =C-c C-b= =gk=
@@ -24,7 +24,7 @@
 **** *# Dired mode*
 
      - 跳到 =Dired mode= =SPC f j=
-     - 
+     -
 
 **** *# 代码缩进修改*
 
@@ -37,6 +37,7 @@
     - =:set number= 显示行号， =vim +26 sample.txt= 打开文件直接到达 26 行，在编辑时也可以 =:26= 跳转到 26行
     - =:/<keyword>= 搜索 =< >= 中的单词并将光标移动到第一个匹配项，输入 =n= 导航到该单词的下一个匹配项
     - =:%s/desktop/laptop/g= 进行替换，将整个文件中的 =desktop= 替换为 =laptop=
+    - =C-s= scroll lock 如果遇到这种情况，可以使用 =C-q= resume
 
 
 *** Linux Command
